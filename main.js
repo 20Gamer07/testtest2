@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
 });
 
 app.get('/', function(req,res) {
-    connection.quary('SELECT * FROM products', (err, rows,fields)=>{
+    connection.query('SELECT * FROM products', (err, rows,fields)=>{
         if(!err)
             res.send(rows)
         else 
